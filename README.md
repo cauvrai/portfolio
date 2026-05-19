@@ -1,2 +1,2 @@
 # portfolio
-Projet de BUT Science des Données,
+Projet de BUT Science des Données.
