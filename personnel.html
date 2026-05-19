@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos — Charles Auvrai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Charles Auvrai</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="cv.html">CV</a>
+    <a href="professionnel.html">Projets</a>
+    <a href="personnel.html" class="active">À propos</a>
+  </div>
+</nav>
+
+<div class="hero" style="min-height:42vh;justify-content:center;padding-top:3rem;">
+  <div class="container">
+    <p class="hero-eyebrow">Personnel</p>
+    <h1 style="font-size:clamp(2.2rem,5vw,4rem);">Au-delà<br>du <em>travail.</em></h1>
+    <p class="hero-desc">Mon parcours, mon caractère, mes passions — ce qui me définit en dehors du bureau.</p>
+  </div>
+</div>
+
+<section class="block">
+  <div class="container">
+    <p class="section-label">Qui suis-je ?</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="fade-up">
+      <div>
+        <h2 class="display" style="margin-bottom:1rem;">Charles<br>Auvrai</h2>
+        <p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.8;">Né le 10 avril 2005 à Paris Xème. Grandi à Vendôme jusqu'à 18 ans. Aujourd'hui étudiant à Niort en BUT Science des données, alternant chez Apivia Macif Mutuelle.</p>
+        <p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.8;margin-top:0.8rem;">Ce portfolio reflète mon parcours jusqu'en juin 2025 — la date à laquelle je l'ai conçu.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div class="card" style="padding:1.25rem 1.5rem;">
+          <div style="font-size:0.75rem;color:var(--ink-faint);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem;">Caractère</div>
+          <div class="tag-list" style="margin-top:0;">
+            <span class="tag">Compétitif</span>
+            <span class="tag">Ambitieux</span>
+            <span class="tag">Travailleur</span>
+            <span class="tag">Investi</span>
+            <span class="tag">Curieux</span>
+          </div>
+        </div>
+        <div class="card" style="padding:1.25rem 1.5rem;">
+          <div style="font-size:0.75rem;color:var(--ink-faint);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem;">Passions</div>
+          <div class="tag-list" style="margin-top:0;">
+            <span class="tag">🏐 Volleyball</span>
+            <span class="tag">⚽ Football</span>
+            <span class="tag">🎮 E-sport</span>
+            <span class="tag">📚 Sci-fi</span>
+            <span class="tag">🤖 IA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <p class="section-label">Parcours personnel</p>
+    <div class="perso-section fade-up">
+
+      <div class="accordion open">
+        <div class="accordion-header" onclick="toggle(this)">
+          Scolarité
+          <span class="accordion-arrow">↓</span>
+        </div>
+        <div class="accordion-body">
+          <p>De mes 2 à 18 ans à Vendôme, collège Robert Lasneau puis lycée Ronsard. Le Covid a bouleversé mon entrée au lycée (rythme hybride). En Première, la physique-chimie m'a coûté du temps et de l'énergie — j'ai décidé de l'abandonner. Bonne décision : en Terminale, les résultats ont décollé.</p>
+          <p style="margin-top:0.8rem;"><strong>Bac :</strong> 18 en Mathématiques, 15 en Anglais monde contemporain, 17 au Grand oral. 9 vœux Parcoursup acceptés, aucun refus. Le BUT Science des données à Niort, mon premier choix, accepté directement.</p>
+          <p style="margin-top:0.8rem;"><a href="https://docs.google.com/document/d/1weUmVEQhk7zBHnocBthEKCkBzHpQ5fNSAA3z9MxonBs/edit?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent);font-weight:500;">Bilan de ma 1re année de BUT →</a></p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggle(this)">
+          Caractère &amp; valeurs
+          <span class="accordion-arrow">↓</span>
+        </div>
+        <div class="accordion-body">
+          <p>Je suis une personne compétitive, qui veut toujours progresser. Cette ambition se retrouve dans le sport, les études et plus récemment le monde professionnel. Dès 16 ans j'ai travaillé — usine, grande surface, travaux divers — pour comprendre la réalité de l'effort. Ces expériences ont forgé ma conviction : pour obtenir ce que l'on veut, il faut s'en donner les moyens.</p>
+          <p style="margin-top:0.8rem;">Dans chaque équipe sportive, j'ai pris le rôle de capitaine. Appartenir à quelque chose et voir les fruits de son investissement collectif — c'est une satisfaction que je retrouve aussi dans mes projets professionnels.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── IMAGES FLOTTANTES DANS LES MARGES ── */
+  .perso-page-wrapper {
+    position: relative;
+  }
+
+  /* Colonne de gauche et de droite fixes en dehors du container */
+  .margin-col {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .margin-col.visible { opacity: 1; }
+
+  .margin-col.left  { left: calc((100vw - 900px) / 2 - 160px); }
+  .margin-col.right { right: calc((100vw - 900px) / 2 - 160px); }
+
+  .margin-img-slot {
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    pointer-events: all;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .margin-img-slot:nth-child(even) { transform: rotate(-2deg); }
+  .margin-img-slot:nth-child(odd)  { transform: rotate(1.5deg); }
+
+  .margin-img-slot:hover {
+    transform: rotate(0deg) scale(1.06) !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    z-index: 20;
+  }
+
+  .margin-img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Placeholder quand pas d'image */
+  .margin-img-slot .img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .margin-img-slot .img-placeholder span {
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  /* Masquer sur petits écrans (pas assez de place) */
+  @media (max-width: 1280px) {
+    .margin-col { display: none; }
+  }
+</style>
+
+<!-- ═══ IMAGES FLOTTANTES MARGE GAUCHE ═══ -->
+<div class="margin-col left" id="margin-left">
+
+  <!--
+    ════════════════════════════════════════════
+    📸 IMAGE MARGE GAUCHE — 1
+    Remplace "images/sport_1.jpg" par ta photo.
+    Idéal : action volleyball, carré ~400×400 px.
+    ════════════════════════════════════════════
+  -->
+  <div class="margin-img-slot">
+    <img src="images/sport_1.jpeg" alt="Sport"
+      onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>🏐</span>Photo sport<br>à ajouter</div>'"
+    />
+  </div>
+
+  <!--
+    ════════════════════════════════════════════
+    📸 IMAGE MARGE GAUCHE — 2
+    Remplace "images/sport_2.jpg" par ta photo.
+    Idéal : match, équipe, terrain — carré.
+    ════════════════════════════════════════════
+  -->
+  <div class="margin-img-slot">
+    <img src="./images/sport_2.png" alt="Sport"
+      onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>⚽</span>Photo sport<br>à ajouter</div>'"
+    />
+  </div>
+
+  <!--
+    ════════════════════════════════════════════
+    📸 IMAGE MARGE GAUCHE — 3
+    Remplace "images/sport_3.jpg" par ta photo.
+    Idéal : podium, trophée, célébration.
+    ════════════════════════════════════════════
+  -->
+  <div class="margin-img-slot">
+    <img src="./images/sport_3.jpeg" alt="Podium"
+      onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>🏆</span>Photo podium<br>à ajouter</div>'"
+    />
+  </div>
+
+</div>
+
+<!-- ═══ IMAGES FLOTTANTES MARGE DROITE ═══ -->
+<div class="margin-col right" id="margin-right">
+
+  <!--
+    ════════════════════════════════════════════
+    📸 IMAGE MARGE DROITE — 1
+    Remplace "images/hobby_1.jpg" par ta photo.
+    Idéal : loisir, gaming, lecture — carré.
+    ════════════════════════════════════════════
+  -->
+  <div class="margin-img-slot">
+    <img src="./images/hobby_1.jpg" alt="Hobby"
+      onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>🎮</span>Photo hobby<br>à ajouter</div>'"
+    />
+  </div>
+
+  <!--
+    ════════════════════════════════════════════
+    📸 IMAGE MARGE DROITE — 2
+    Remplace "images/hobby_2.jpg" par ta photo.
+    Idéal : ambiance, voyage, quotidien — carré.
+    ════════════════════════════════════════════
+  -->
+  <div class="margin-img-slot">
+    <img src="./images/hobby_2.png" alt="Hobby"
+      onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>📚</span>Photo loisir<br>à ajouter</div>'"
+    />
+  </div>
+
+  <!--
+    ════════════════════════════════════════════
+    📸 IMAGE MARGE DROITE — 3
+    Remplace "images/perso_1.jpg" par ta photo.
+    Idéal : portrait décontracté, sortie, amis.
+    ════════════════════════════════════════════
+  -->
+  <div class="margin-img-slot">
+    <img src="./images/hobby_3.jpeg" alt="Personnel"
+      onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span>📷</span>Photo perso<br>à ajouter</div>'"
+    />
+  </div>
+
+</div>
+
+<section class="block">
+  <div class="container">
+    <p class="section-label">Sport</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;" class="fade-up">
+
+      <div class="card" style="padding:2rem;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">🏐</div>
+        <div style="font-weight:600;font-size:1.1rem;margin-bottom:0.5rem;">Volleyball</div>
+        <p style="font-size:0.9rem;color:var(--ink-soft);line-height:1.7;">4 ans de pratique. Club du VB Pexinois Niort, poste de central, niveau pré-national (renfort équipe départementale). Cette saison : 1ʳᵉ place championnat pré-national play-down, titre de champion départemental avec 100% des matchs débutés.</p>
+        <p style="font-size:0.9rem;color:var(--ink-soft);margin-top:0.6rem;">Objectif à moyen terme : atteindre un niveau semi-professionnel.</p>
+      </div>
+
+      <div class="card" style="padding:2rem;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">⚽🎾</div>
+        <div style="font-weight:600;font-size:1.1rem;margin-bottom:0.5rem;">Football &amp; Tennis</div>
+        <p style="font-size:0.9rem;color:var(--ink-soft);line-height:1.7;">11 ans de football, 7 ans de tennis. Capitaine dans chaque discipline. L'engagement dans une équipe — sur et en dehors du terrain — est quelque chose qui me définit depuis l'enfance.</p>
+      </div>
+
+    </div>
+
+    <p class="section-label" style="margin-top:3rem;">Autres passions</p>
+    <div class="card-grid cols-3 fade-up" style="margin-top:1rem;">
+      <div class="card" style="padding:1.5rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🎮</div>
+        <div style="font-weight:600;margin-bottom:0.4rem;">E-sport</div>
+        <p style="font-size:0.88rem;color:var(--ink-soft);">Ancien joueur compétitif. Je suis aujourd'hui les grandes compétitions internationales avec intérêt — un secteur qui s'est professionnalisé et qui me passionne.</p>
+      </div>
+      <div class="card" style="padding:1.5rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">📚</div>
+        <div style="font-weight:600;margin-bottom:0.4rem;">Science-fiction</div>
+        <p style="font-size:0.88rem;color:var(--ink-soft);">Romans, séries, films. Un univers futuriste ou fantaisiste qui nourrit ma curiosité pour l'IA et les technologies de demain.</p>
+      </div>
+      <div class="card" style="padding:1.5rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.6rem;">🤖</div>
+        <div style="font-weight:600;margin-bottom:0.4rem;">Intelligence artificielle</div>
+        <p style="font-size:0.88rem;color:var(--ink-soft);">Une passion qui se prolonge dans mes choix d'études et mes ambitions professionnelles. L'IA est l'un des domaines qui m'attire le plus pour la suite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* Apparition des colonnes latérales quand on scroll dans la section sport/passions */
+  const triggerSection = document.querySelector('section.block:nth-of-type(3)');
+  const marginLeft  = document.getElementById('margin-left');
+  const marginRight = document.getElementById('margin-right');
+
+  const marginObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        marginLeft.classList.add('visible');
+        marginRight.classList.add('visible');
+      } else {
+        marginLeft.classList.remove('visible');
+        marginRight.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  if (triggerSection) marginObs.observe(triggerSection);
+</script>
+
+<section class="block fade-up" id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="display">Faisons connaissance.</h2>
+    <div class="contact-row">
+      <span class="contact-link" style="cursor:default;">✉ charlesauvrai@gmail.com </span>
+      <a href="https://linkedin.com/in/charles-auvrai-0b6b42292/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn</a>
+      <span class="contact-link" style="cursor:default;">📞 07 69 12 31 12</span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 Charles Auvrai · Portfolio personnel</footer>
+
+<script>
+  function toggle(header) {
+    const acc = header.parentElement;
+    acc.classList.toggle('open');
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.remove('active');
+    if(a.getAttribute('href') === path) a.classList.add('active');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Charles Auvrai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Charles Auvrai</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="cv.html" class="active">CV</a>
+    <a href="professionnel.html">Projets</a>
+    <a href="personnel.html">À propos</a>
+  </div>
+</nav>
+
+<div class="hero" style="min-height:42vh;justify-content:center;padding-top:3rem;">
+  <div class="container">
+    <p class="hero-eyebrow">Parcours</p>
+    <h1 style="font-size:clamp(2.2rem,5vw,4rem);">Mon CV</h1>
+    <p class="hero-desc" style="margin-bottom:1.5rem;">Formation, expériences et compétences techniques.</p>
+    <a href="https://canva.link/uidte1bbartq6tf" target="_blank" rel="noopener" class="btn btn-ghost" style="width:fit-content;">📄 Consulter le CV</a>
+  </div>
+</div>
+
+<section class="block">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+
+      <!-- Colonne gauche : parcours -->
+      <div>
+        <p class="section-label">Formation</p>
+        <div class="timeline fade-up">
+          <div class="timeline-item">
+            <div class="timeline-date">2023 – 2026</div>
+            <div class="timeline-title">BUT Science des données</div>
+            <div class="timeline-sub">IUT Niort · Université de Poitiers</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2022 – 2023</div>
+            <div class="timeline-title">Baccalauréat Général</div>
+            <div class="timeline-sub">Lycée Ronsard · Vendôme<br>Spé. Maths · Anglais Monde Contemporain</div>
+          </div>
+        </div>
+
+        <p class="section-label" style="margin-top:3rem;">Expériences</p>
+        <div class="timeline fade-up">
+          <div class="timeline-item">
+            <div class="timeline-date">2023 – 2025 · Alternance</div>
+            <div class="timeline-title">Apivia Macif Mutuelle</div>
+            <div class="timeline-sub">Chargé d'études statistiques · Groupe Aéma<br>Migration SAS → Dataiku, dashboards, automatisation.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Dès 16 ans · Saisonnier</div>
+            <div class="timeline-title">Travail étudiant</div>
+            <div class="timeline-sub">Usine · Grande surface · Travaux divers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : compétences -->
+      <div>
+        <p class="section-label">Compétences</p>
+        <div class="card fade-up" style="padding:1.5rem 1.75rem;">
+          <div id="skills-list">
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">Dataiku DSS</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">SQL</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">SAS</span>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-w="65"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">R</span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-w="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">55%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-w="55"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">HTML / CSS</span>
+                <span class="skill-pct">45%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-w="45"></div></div>
+            </div>
+          </div>
+          <p style="font-size:0.8rem;color:var(--ink-faint);margin-top:1.25rem;">Compétences acquises en formation (IUT Niort) et en alternance chez Apivia Macif Mutuelle.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block fade-up" id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="display">Restons en contact.</h2>
+    <div class="contact-row">
+      <span class="contact-link" style="cursor:default;">✉ charlesauvrai@gmail.com </span>
+      <a href="https://linkedin.com/in/charles-auvrai-0b6b42292/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn</a>
+      <span class="contact-link" style="cursor:default;">📞 07 69 12 31 12</span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 Charles Auvrai · Portfolio personnel</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.querySelectorAll('.skill-fill').forEach(bar => {
+          bar.style.width = bar.dataset.w + '%';
+        });
+        skillObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('#skills-list').forEach(el => skillObs.observe(el));
+
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.remove('active');
+    if(a.getAttribute('href') === path) a.classList.add('active');
+  });
+</script>
+<!-- BOUTON FLOTTANT CHATBOT -->
+<div id="chat-bubble" onclick="toggleChatPreview()" title="Parler à l'IA de Charles">
+  🤖
+</div>
+
+<div id="chat-preview">
+  <div id="chat-preview-header">
+    <span>Assistant IA</span>
+    <button onclick="toggleChatPreview()" id="chat-close">✕</button>
+  </div>
+  <div id="chat-preview-body">
+    <p>Bonjour ! Je suis l'IA de <strong>Charles Auvrai</strong>.</p>
+    <p>Pose-moi une question sur son parcours, ses compétences ou ses projets.</p>
+  </div>
+  <a href="https://projet-llm-cauvrai.streamlit.app/" target="_blank" rel="noopener" id="chat-cta">
+    Démarrer la conversation →
+  </a>
+</div>
+
+<style>
+  #chat-bubble {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    background: var(--ink);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: bounce 3s ease infinite;
+  }
+
+  #chat-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(0,0,0,0.25);
+    animation: none;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+
+  #chat-preview {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 2rem;
+    width: 280px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    z-index: 9998;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.97);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform-origin: bottom right;
+  }
+
+  #chat-preview.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+  }
+
+  #chat-preview-header {
+    background: var(--ink);
+    color: white;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  #chat-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  #chat-close:hover { opacity: 1; }
+
+  #chat-preview-body {
+    padding: 1rem 1.1rem 0.5rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  #chat-preview-body p { margin-bottom: 0.5rem; }
+
+  #chat-cta {
+    display: block;
+    margin: 0.75rem 1rem 1rem;
+    padding: 0.65rem 1rem;
+    background: var(--ink);
+    color: white;
+    text-align: center;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  #chat-cta:hover { background: #222; }
+</style>
+
+<script>
+  function toggleChatPreview() {
+    document.getElementById('chat-preview').classList.toggle('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    const bubble  = document.getElementById('chat-bubble');
+    const preview = document.getElementById('chat-preview');
+    if (!bubble.contains(e.target) && !preview.contains(e.target)) {
+      preview.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
