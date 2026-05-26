@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Charles Auvrai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Charles Auvrai</a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="cv.html" class="active">CV</a>
+    <a href="professionnel.html">Projets</a>
+    <a href="personnel.html">À propos</a>
+  </div>
+</nav>
+
+<div class="hero" style="min-height:42vh;justify-content:center;padding-top:3rem;">
+  <div class="container">
+    <p class="hero-eyebrow">Parcours</p>
+    <h1 style="font-size:clamp(2.2rem,5vw,4rem);">Mon CV</h1>
+    <p class="hero-desc" style="margin-bottom:1.5rem;">Formation, expériences et compétences techniques.</p>
+    <a href="https://www.canva.com/design/DAGAildMl7Q/eyB2fz3Aw3SigBaNTqkN2A/view?utm_content=DAGAildMl7Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcf3bb3f7a4" target="_blank" rel="noopener" class="btn btn-ghost" style="width:fit-content;">📄 Télécharger le CV PDF</a>
+  </div>
+</div>
+
+<section class="block">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+
+      <!-- Colonne gauche : parcours -->
+      <div>
+        <p class="section-label">Formation</p>
+        <div class="timeline fade-up">
+          <div class="timeline-item">
+            <div class="timeline-date">2023 – 2026</div>
+            <div class="timeline-title">BUT Science des données</div>
+            <div class="timeline-sub">IUT Niort · Université de Poitiers</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2022 – 2023</div>
+            <div class="timeline-title">Baccalauréat Général</div>
+            <div class="timeline-sub">Lycée Ronsard · Vendôme<br>Spé. Maths · Anglais Monde Contemporain</div>
+          </div>
+        </div>
+
+        <p class="section-label" style="margin-top:3rem;">Expériences</p>
+        <div class="timeline fade-up">
+          <div class="timeline-item">
+            <div class="timeline-date">2023 – 2025 · Alternance</div>
+            <div class="timeline-title">Apivia Macif Mutuelle</div>
+            <div class="timeline-sub">Chargé d'études statistiques · Groupe Aéma<br>Migration SAS → Dataiku, dashboards, automatisation.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Dès 16 ans · Saisonnier</div>
+            <div class="timeline-title">Travail étudiant</div>
+            <div class="timeline-sub">Usine · Grande surface · Travaux divers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : compétences -->
+      <div>
+        <p class="section-label">Compétences</p>
+        <div class="card fade-up" style="padding:1.5rem 1.75rem;">
+
+          <!-- Sélecteur d'année -->
+          <div class="year-switcher">
+            <button class="yr-btn" data-year="1">1re année</button>
+            <button class="yr-btn" data-year="2">2e année</button>
+            <button class="yr-btn active" data-year="3">3e année</button>
+          </div>
+
+          <!--
+            data-y1 / data-y2 / data-y3 = niveau en % pour chaque année.
+            Modifie ces valeurs librement.
+          -->
+          <div id="skills-list">
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">Dataiku DSS</span>
+                <span class="skill-pct" id="pct-dataiku">85%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-y1="0" data-y2="60" data-y3="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">SQL</span>
+                <span class="skill-pct" id="pct-sql">70%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-y1="50" data-y2="65" data-y3="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">SAS</span>
+                <span class="skill-pct" id="pct-sas">65%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-y1="50" data-y2="60" data-y3="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">R</span>
+                <span class="skill-pct" id="pct-r">45%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-y1="30" data-y2="45" data-y3="45"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct" id="pct-python">50%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-y1="30" data-y2="35" data-y3="50"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-row">
+                <span class="skill-name">HTML / CSS</span>
+                <span class="skill-pct" id="pct-html">55%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-y1="20" data-y2="50" data-y3="55"></div>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size:0.8rem;color:var(--ink-faint);margin-top:1.25rem;">
+            Compétences acquises en formation (IUT Niort) et en alternance chez Apivia Macif Mutuelle.
+          </p>
+        </div>
+      </div>
+
+<style>
+  .year-switcher {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .yr-btn {
+    flex: 1;
+    padding: 0.4rem 0;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    background: transparent;
+    color: var(--ink-faint);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .yr-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+  .yr-btn.active {
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+  }
+</style>
+
+    </div>
+  </div>
+</section>
+
+<section class="block fade-up" id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="display">Restons en contact.</h2>
+    <div class="contact-row">
+      <a href="mailto:charlesauvrai@gmail.com" class="contact-link">✉ Email</a>
+      <a href="https://linkedin.com/in/charles-auvrai-0b6b42292/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn</a>
+      <span class="contact-link" style="cursor:default;">📞 07 69 12 31 12</span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 Charles Auvrai · Portfolio personnel</footer>
+
+<script>
+  /* ── Fade-up au scroll ── */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  /* ── Barres de compétences ── */
+  const pctIds = {
+    dataiku: ['pct-dataiku'],
+    sql:     ['pct-sql'],
+    sas:     ['pct-sas'],
+    r:       ['pct-r'],
+    python:  ['pct-python'],
+    html:    ['pct-html'],
+  };
+
+  let activeYear = 3;
+
+  function getVal(fill, year) {
+    return +fill.dataset['y' + year];
+  }
+
+  function animateBars(year) {
+    document.querySelectorAll('.skill-fill').forEach(fill => {
+      const val = getVal(fill, year);
+      fill.style.width = val + '%';
+    });
+
+    // Met à jour les pourcentages affichés
+    // Ordre : dataiku, sql, sas, r, python, html
+    const fills = document.querySelectorAll('.skill-fill');
+    const keys = ['dataiku','sql','sas','r','python','html'];
+    fills.forEach((fill, i) => {
+      const el = document.getElementById('pct-' + keys[i]);
+      if (el) el.textContent = getVal(fill, year) + '%';
+    });
+  }
+
+  /* Déclencher à l'apparition dans le viewport */
+  let triggered = false;
+  const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !triggered) {
+        triggered = true;
+        animateBars(activeYear);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('#skills-list').forEach(el => skillObs.observe(el));
+
+  /* Boutons année */
+  document.querySelectorAll('.yr-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeYear = +btn.dataset.year;
+      animateBars(activeYear);
+    });
+  });
+
+  /* ── Nav active ── */
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.remove('active');
+    if(a.getAttribute('href') === path) a.classList.add('active');
+  });
+</script>
+
+<!-- BOUTON FLOTTANT CHATBOT -->
+<div id="chat-bubble" onclick="toggleChatPreview()" title="Parler à l'IA de Charles">
+  🤖
+</div>
+
+<div id="chat-preview">
+  <div id="chat-preview-header">
+    <span>Assistant IA</span>
+    <button onclick="toggleChatPreview()" id="chat-close">✕</button>
+  </div>
+  <div id="chat-preview-body">
+    <p>Bonjour ! Je suis l'IA de <strong>Charles Auvrai</strong>.</p>
+    <p>Pose-moi une question sur son parcours, ses compétences ou ses projets.</p>
+  </div>
+  <a href="https://projet-llm-cauvrai.streamlit.app/" target="_blank" rel="noopener" id="chat-cta">
+    Démarrer la conversation →
+  </a>
+</div>
+
+
+</body>
+</html>

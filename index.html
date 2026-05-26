@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charles Auvrai — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Charles Auvrai</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="cv.html">CV</a>
+    <a href="professionnel.html">Projets</a>
+    <a href="personnel.html">À propos</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-grid">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  
+
+  <!-- Photo flottante en haut à droite du hero -->
+  <div class="hero-photo-wrap">
+    <!--
+      ════════════════════════════════════════════
+      📸 PHOTO DE PROFIL — ACCUEIL
+      Remplace "images/photo_profil.jpg" par le
+      chemin de ta photo (ex: images/moi.jpg).
+      Format idéal : portrait, 400×500 px minimum.
+      ════════════════════════════════════════════
+    -->
+    <img
+      src="./images/photo_profil.png"
+      alt="Charles Auvrai"
+      class="hero-photo"
+      onerror="this.parentElement.style.display='none'"
+    />
+  </div>
+
+  <div class="container">
+    <p class="hero-eyebrow">Portfolio · 2026</p>
+    <h1>Data,<br>science &<br><em>ambition.</em></h1>
+    <p class="hero-desc">Étudiant en BUT Science des Données et alternant chez  Macif Santé Prévoyance. Curieux, compétitif et pour objectif les métiers de la data.</p>
+    <div class="hero-actions">
+      <a href="professionnel.html" class="btn btn-primary">Voir mes projets →</a>
+      <a href="cv.html" class="btn btn-ghost">Mon CV</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" style="position:absolute;bottom:2.5rem;left:2.5rem;">
+    <div class="scroll-line"></div>
+  </div>
+</div>
+
+<style>
+  .hero-photo-wrap {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .hero-photo {
+    width: 260px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    display: block;
+    /* Légère rotation pour un effet éditorial */
+    transform: rotate(1.5deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .hero-photo:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 28px 70px rgba(0,0,0,0.22);
+  }
+
+  /* Sur mobile, la photo passe en dessous du texte */
+  @media (max-width: 768px) {
+    .hero-photo-wrap {
+      position: static;
+      transform: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .hero-photo {
+      width: 160px;
+      height: 210px;
+    }
+  }
+</style>
+
+<section class="block">
+  <div class="container">
+    <p class="section-label">À la une</p>
+    <div class="card-grid cols-3" style="margin-top:1rem;">
+      <a href="cv.html" class="card" style="text-decoration:none;color:inherit;">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">📄</div>
+        <div style="font-weight:600;margin-bottom:0.4rem;">CV & Formation</div>
+        <div style="font-size:0.88rem;color:var(--ink-soft);">BUT Science des données, Baccaleauréat, compétences techniques.</div>
+      </a>
+      <a href="professionnel.html" class="card" style="text-decoration:none;color:inherit;">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">💼</div>
+        <div style="font-weight:600;margin-bottom:0.4rem;">Projets</div>
+        <div style="font-size:0.88rem;color:var(--ink-soft);">Migration SAS→Dataiku, dashboards, projets universitaires.</div>
+      </a>
+      <a href="personnel.html" class="card" style="text-decoration:none;color:inherit;">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;">🏐</div>
+        <div style="font-weight:600;margin-bottom:0.4rem;">Personnel</div>
+        <div style="font-size:0.88rem;color:var(--ink-soft);">Volleyball, e-sport, science-fiction — qui je suis.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="block fade-up">
+  <div class="container">
+    <p class="section-label">En chiffres</p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Formation post-bac</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Ans d'alternance</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Années de formation</span></div>
+      <div class="stat"><span class="stat-num">4</span><span class="stat-label">Projets expliqués</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block fade-up" id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="display">Discutons.</h2>
+    <p style="color:var(--ink-soft);max-width:420px;font-size:0.95rem;">Projet, alternance, ou simplement échanger sur la data et ses métiers — n'hésitez pas.</p>
+    <div class="contact-row">
+      <span class="contact-link" style="cursor:default;">✉ charlesauvrai@gmail.com </span>
+      <a href="https://linkedin.com/in/charles-auvrai-0b6b42292/" target="_blank" rel="noopener" class="contact-link">🔗 LinkedIn</a>
+      <span class="contact-link" style="cursor:default;">📞 07 69 12 31 12</span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 Charles Auvrai · Portfolio personnel</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.remove('active');
+    if(a.getAttribute('href') === path) a.classList.add('active');
+  });
+</script>
+
+
+</body>
+</html>
