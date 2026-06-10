@@ -359,25 +359,5 @@
     if(a.getAttribute('href') === path) a.classList.add('active');
   });
 </script>
-
-<!-- BOUTON FLOTTANT CHATBOT -->
-<div id="chat-bubble" onclick="toggleChatPreview()" title="Parler à l'IA de Charles">
-  🤖
-</div>
-
-<div id="chat-preview">
-  <div id="chat-preview-header">
-    <span>Assistant IA</span>
-    <button onclick="toggleChatPreview()" id="chat-close">✕</button>
-  </div>
-  <div id="chat-preview-body">
-    <p>Bonjour ! Je suis l'IA de <strong>Charles Auvrai</strong>.</p>
-    <p>Pose-moi une question sur son parcours, ses compétences ou ses projets.</p>
-  </div>
-  <a href="https://projet-llm-cauvrai.streamlit.app/" target="_blank" rel="noopener" id="chat-cta">
-    Démarrer la conversation →
-  </a>
-</div>
-
 </body>
 </html>
